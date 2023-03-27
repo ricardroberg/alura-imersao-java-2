@@ -2,20 +2,10 @@
 
 ## Alura Stickers
 
-### Aula 01
+Este repositório conterá o código das aulas da segunda edição da Imersão Java da Alura.
 
-- configurado arquivo .ENV com chave API e adicionado ao .gitignore
-- Adicionados 3 novos caminhos para resultados (totalizando 4)
+Serão 5 aulas de programação, gratuitas, para você desenvolver do zero sua primeira aplicação em Java, progredir na carreira e ampliar ou começar o seu portfólio.
 
-```java
-final String MOST_POPULAR_TV="MostPopularTVs/";
-final String MOST_POPULAR_MOVIE="MostPopularMovies/";
-final String TOP_250_TV="Top250TVs/";
-final String TOP_250_MOVIE="Top250Movies/";
-```
+Inscreva-se: https://www.alura.com.br/imersao-java
 
-Que são adicionados a url final:
-
-```java
-String url="https://imdb-api.com/pt/API/"+SearchField+api_key; 
-```
+## Cada aula terá sua branch específica
