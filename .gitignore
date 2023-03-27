@@ -1,3 +1,3 @@
-.env
-.idea/**
-target/**
+alura-stickers.env
+alura-stickers/.idea/**
+alura-stickers/target/**
