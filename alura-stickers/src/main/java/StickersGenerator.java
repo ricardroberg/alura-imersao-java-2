@@ -33,11 +33,16 @@ public class StickersGenerator {
         graphics.drawImage(originalImage, 0, 0, null);
 
         // configurar texto, fonte e cor
-        String text = "LAYOFFS";
+        String text = "TOPZERA";
         int fontSize = 76;
         Font fontStyle = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
         graphics.setColor(Color.RED);
         graphics.setFont(fontStyle);
+
+        /*
+         * Para adicionar um segundo texto devemos criar uma nova instância de Font (linha38)
+         * com seus respectivos dados, chamar o setFont e o drawString com o novo elemento.
+         * */
 
         // calculando posicionalmento
         var textWidth = graphics.getFontMetrics().stringWidth(text);
