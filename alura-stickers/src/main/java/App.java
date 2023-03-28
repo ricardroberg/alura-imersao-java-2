@@ -6,12 +6,15 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
+
+        Locale.setDefault(Locale.US);
 
         // Carregando a chave API declarada em arquivo .ENV
         Dotenv dotenv = Dotenv.load();
@@ -59,9 +62,10 @@ public class App {
 
         // exibir e manipular os dados
         for (Map<String, String> filme : listaDeFilmes) {
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
-            System.out.println(filme.get("imDbRating"));
+            System.out.println("Título: " + filme.get("title"));
+            System.out.println("Poster: " + filme.get("image"));
+            System.out.println("\u001B[41m" + "Classificação: " + filme.get("imDbRating") + "\u001B[0m");
+            System.out.println("\u2B50".repeat((int) Double.parseDouble(filme.get("imDbRating"))));
             System.out.println();
         }
         sc.close();
