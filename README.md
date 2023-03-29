@@ -1,8 +1,8 @@
-# Imersão Java Alura 2ed
+# IMERSÂO JAVA ALURA 2ED
 
-## Alura Stickers
+# Alura Stickers
 
-### Aula 01
+## AULA 01
 
 - configurado arquivo .ENV com chave API e adicionado ao .gitignore
 - Adicionados 3 novos caminhos para resultados (totalizando 4)
@@ -20,22 +20,40 @@ Que são adicionados a url final:
 String url="https://imdb-api.com/pt/API/"+SearchField+api_key;
 ```
 
-![image](https://user-images.githubusercontent.com/47563670/228097059-5dba5cdd-7960-4d72-9db8-43c147b8e3d3.png)
+```bash
+Titulo: The Shawshank Redemption
+Classificacao: 9.2
+⭐⭐⭐⭐⭐⭐⭐⭐⭐
+
+Titulo: The Godfather
+Classificacao: 9.2
+⭐⭐⭐⭐⭐⭐⭐⭐⭐
+```
 
 <br>
 
 ---
+
 <br>
 
-### Aula 02
+## AULA 02
 
 - Criada classe para conversão das imagens e adição de texto. Instanciando uma classe e fazendo o forEach para cada imagem:
+
 ```java
 StickersGenerator newSticker = new StickersGenerator();
 ```
+
 - Menu funcionando:
 
-![image](https://user-images.githubusercontent.com/47563670/228097302-dea41b92-dc4b-4817-8626-d53144f1d950.png)
+```bash
+====================================================
+1 - Exibir lista Top 250 Filmes
+2 - Exibir lista Top 250 SÃ©eies TV
+3 - Filmes mais populares
+4 - Series TV mais populares
+====================================================
+```
 
 - Utilizando os JSON providos pela Alura
 
@@ -46,3 +64,31 @@ final String TOP_250_TV = "TopTVs.json";
 final String TOP_250_MOVIE = "TopMovies.json";
 String mainURL = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/";
 ```
+
+<br>
+
+---
+
+<br>
+
+## AULA 03
+
+- Abstração dos componentes
+- Criação de um extrator para API da Nasa e outro para IMDB
+- Criada interface em comum com os 2 extratores.
+
+```java
+public interface ContentExtractor {
+    List<Content> contentExtrator(String json);
+}
+```
+
+e sua implementação nas classes:
+
+```java
+public class NasaContentExtractor implements ContentExtractor {...
+// e
+public class IMDBContentExtractor implements ContentExtractor {
+```
+
+- Falta resolver desafios ...
