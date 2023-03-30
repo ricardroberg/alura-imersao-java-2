@@ -34,7 +34,7 @@ public class StickersGenerator {
 
         // configurar texto, fonte e cor
         String text = "TOPZERA";
-        int fontSize = 76;
+        int fontSize = 48;
         Font fontStyle = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
         graphics.setColor(Color.RED);
         graphics.setFont(fontStyle);

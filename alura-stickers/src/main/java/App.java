@@ -12,7 +12,8 @@ public class App {
         Dotenv dotenv = Dotenv.load();
         String apiKey = dotenv.get("NASAKEY");
         String mainURL = "https://api.nasa.gov/planetary/apod?api_key=";
-        String url = mainURL + apiKey + "&start_date=2023-03-29&end_date=2023-03-29";
+//        String url = mainURL + apiKey + "&start_date=2023-03-29&end_date=2023-03-29";
+        String url = "http://localhost:8080/languages";
 //        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2023-03-29&end_date=2023-03-29";
 //        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies.json";
 
@@ -21,8 +22,8 @@ public class App {
         String json = http.searchData(url);
 
         // exibir e manipular os dados
-        ContentExtractor extractor = new NasaContentExtractor();
-//        ContentExtractor extractor = new IMDBContentExtractor();
+//        ContentExtractor extractor = new NasaContentExtractor();
+        ContentExtractor extractor = new IMDBContentExtractor();
         List<Content> contents = extractor.contentExtrator(json);
 
         StickersGenerator newSticker = new StickersGenerator();
