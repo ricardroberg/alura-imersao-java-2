@@ -2,3 +2,4 @@ alura-stickers/.env
 alura-stickers/.idea/**
 alura-stickers/target/**
 alura-stickers/assets/**
+api-languages/src/main/resources/application.properties
