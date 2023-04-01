@@ -50,20 +50,4 @@ public class LanguageController {
     public void removeLanguageById(@PathVariable String id){
        repository.deleteById(id);
     }
-
-
-//    @DeleteMapping("/languages/{id}"){
-//    public Language removeLanguageById(String id){
-//        repository.deleteById(id);
-//    }
-
 }
-
-//    private List<Language> languageList = List.of(
-//            new Language("Java", "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/java/java_256x256.png", 1),
-//            new Language("Python", "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/python/python_256x256.png", 2),
-//            new Language("JavaScript", "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/javascript/javascript_256x256.png", 3),
-//            new Language("TypeScript", "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/typescript/typescript_256x256.png", 4),
-//            new Language("Html", "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/html/html_256x256.png", 5),
-//            new Language("CSS", "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/css/css_256x256.png", 6)
-//    );

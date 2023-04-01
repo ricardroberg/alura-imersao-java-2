@@ -91,4 +91,66 @@ public class NasaContentExtractor implements ContentExtractor {...
 public class IMDBContentExtractor implements ContentExtractor {
 ```
 
-- Falta resolver desafios ...
+<br>
+
+---
+
+<br>
+
+## AULA 04
+
+- Criado cluster MongoDB Cloud para armazenar os dados
+- Utilizado Spring para fazer as requisições no DB e gerar os EndPoints
+- Classe LanguageController implementa CRUD básico.
+
+```java
+ @GetMapping("/languages")
+    public List<Language> getAllLanguages(){
+        List<Language> languageList = repository.findAll();
+        return languageList;
+    }
+
+    @GetMapping(value="/languages/{id}")
+    public Language getLanguageById(@PathVariable String id){
+        return repository.findById(id).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
+
+    @PostMapping( "/languages")
+    public Language addLanguage(@RequestBody Language language){
+        Language savedLanguage = repository.save(language);
+        return savedLanguage;
+    }
+
+    @PutMapping(value="/languages/{id}")
+    public Language updateLanguageById(@PathVariable String id, @RequestBody Language language){
+        if(!repository.existsById(id)){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        language.setId(id);
+        Language savedLanguage = repository.save(language);
+        return savedLanguage;
+    }
+
+    @DeleteMapping("/languages/{id}")
+    public void removeLanguageById(@PathVariable String id){
+       repository.deleteById(id);
+    }
+```
+
+- Dados acessados com sucesso em /languages:
+
+```json
+{
+  "id": "6426060c0b79e41987a2ac74",
+  "title": "Java",
+  "image": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/java/java_256x256.png",
+  "rank": 1
+},
+{
+  "id": "6426060c0b79e41987a2ac75",
+  "title": "Python",
+  "image": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/python/python_256x256.png",
+  "rank": 2
+},
+...
+```
