@@ -162,7 +162,12 @@ public class IMDBContentExtractor implements ContentExtractor {
 <br>
 
 ## AULA 05
+
 ### Publicando API no Cloud (Heroku)
 
 - configurando e buildando docker image pelo VSCode
-![image](https://user-images.githubusercontent.com/47563670/229316179-68353edf-9d81-4331-b54a-1d5b15d42c0f.png)
+  ![image](https://user-images.githubusercontent.com/47563670/229316179-68353edf-9d81-4331-b54a-1d5b15d42c0f.png)
+
+e a partir do momento que precisou de um cartão de crédito para continuar a configuração no [Fly.io](https://fly.io/.io) eu dei por encerrada a tarefa.
+
+(Próxima etapa será criar um front com React.js para consumir a API)
