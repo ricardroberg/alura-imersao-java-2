@@ -165,3 +165,4 @@ public class IMDBContentExtractor implements ContentExtractor {
 ### Publicando API no Cloud (Heroku)
 
 - configurando e buildando docker image pelo VSCode
+![image](https://user-images.githubusercontent.com/47563670/229316179-68353edf-9d81-4331-b54a-1d5b15d42c0f.png)
